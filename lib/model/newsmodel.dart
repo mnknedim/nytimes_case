@@ -207,3 +207,10 @@ class MediaMetadata {
     return data;
   }
 }
+
+class ArticleDetay {
+  String? leadParagraph = "";
+  String? abstract = "";
+
+  ArticleDetay({this.abstract, this.leadParagraph});
+}

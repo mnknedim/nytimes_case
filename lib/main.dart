@@ -46,7 +46,34 @@ class HomePage extends StatelessWidget {
             icon: const Icon(Icons.search),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showMenu(
+                context: context,
+                position: const RelativeRect.fromLTRB(100, 100, 0, 0),
+                items: [
+                  const PopupMenuItem(
+                    value: 1,
+                    child: Text('Last 1 Day'),
+                  ),
+                  const PopupMenuItem(
+                    value: 3,
+                    child: Text('Last 3 Day'),
+                  ),
+                  const PopupMenuItem(
+                    value: 7,
+                    child: Text('Last 7 Day'),
+                  ),
+                ],
+                elevation: 8,
+              ).then((value) {
+                // Dropdown menüsünden bir seçenek seçildiğinde yapılacak işlemler
+                if (value == 1) {
+                  // Seçenek 1 seçildiğinde yapılacak işlemler
+                } else if (value == 2) {
+                  // Seçenek 2 seçildiğinde yapılacak işlemler
+                }
+              });
+            },
             icon: const Icon(Icons.bubble_chart),
           ),
         ],
